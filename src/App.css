@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+
+@theme {
+    --font-montserrat: "Montserrat", sans-serif;
+    --color-primary: #ff6348;
+    --color-secondary: #3498db;
+    --color-gray-primary: #20232a;
+    --color-gray-secondary: #efefef;
+    --color-gray-tertiary: #444;
+}
+
+@utility debug-* {
+    background-color: --value("red", "green", "blue", "purple");
+    border: 1px solid --value("red", "green", "blue", "purple");
+}
+
+@utility debug-media {
+    border: 2px solid red;
+
+    @media (width >= 40rem) {
+        border-color: orange;
+    }
+
+    @media (width >= 48rem) {
+        border-color: yellow;
+    }
+
+    @media (width >= 64rem) {
+        border-color: green;
+    }
+
+    @media (width >= 80rem) {
+        border-color: blue;
+    }
+
+    @media (width >= 96rem) {
+        border-color: purple;
+    }
+}
